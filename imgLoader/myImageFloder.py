@@ -49,8 +49,8 @@ class myImageFloder(data.Dataset):
 
 
 def testmyImageFloder():
-    dataloader = myImageFloder('./data/testImages/images',
-                               './data/testImages/test_images.txt')
+    dataloader = myImageFloder('../data/testImages/images',
+                               '../data/testImages/test_images.txt')
     print ('dataloader.getName', dataloader.getName())
 
     for index , (img, label) in enumerate(dataloader):

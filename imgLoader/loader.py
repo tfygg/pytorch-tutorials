@@ -21,7 +21,7 @@ mytransform = transforms.Compose([
 )
 
 # torch.utils.data.DataLoader
-cifarSet = torchvision.datasets.CIFAR10(root = "./data/cifar/", train= True, download = True, transform = mytransform )
+cifarSet = torchvision.datasets.CIFAR10(root = "../data/cifar/", train= True, download = True, transform = mytransform )
 cifarLoader = torch.utils.data.DataLoader(cifarSet, batch_size= 10, shuffle= False, num_workers= 2)
 print len(cifarSet)
 print len(cifarLoader)
@@ -35,7 +35,7 @@ for i, data in enumerate(cifarLoader, 0):
 
 # torch.utils.data.DataLoader
 imgLoader = torch.utils.data.DataLoader(
-         myFloder.myImageFloder(root = "./data/testImages/images", label = "./data/testImages/test_images.txt", transform = mytransform ), 
+         myFloder.myImageFloder(root = "../data/testImages/images", label = "../data/testImages/test_images.txt", transform = mytransform ), 
          batch_size= 2, shuffle= False, num_workers= 2)
 
 for i, data in enumerate(imgLoader, 0):

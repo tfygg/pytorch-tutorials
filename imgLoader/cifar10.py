@@ -14,7 +14,7 @@ import cv2
 print("\n\t\t torchvision.datasets.CIFAR10 test \n \t\t\t\t\t\t ----by tfygg")
 
 # torchvision.datasets.CIFAR10
-cifarSet = torchvision.datasets.CIFAR10(root = "./data/cifar/", train= True, download = True)
+cifarSet = torchvision.datasets.CIFAR10(root = "../data/cifar/", train= True, download = True)
 print(cifarSet[0])
 img, label = cifarSet[0]
 print (img)

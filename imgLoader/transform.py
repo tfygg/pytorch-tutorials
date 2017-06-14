@@ -7,13 +7,14 @@ Created on 2017.6.11
 import torch
 import torchvision
 import torchvision.transforms as transforms
+import torchvision.utils as utils
 from PIL import Image
 import numpy as np
 import cv2 
 
 print("\n\t\t torch.utils.data.DataLoader test \n \t\t\t\t\t\t ----by tfygg")
 
-img_path = "./data/img_37.jpg"
+img_path = "../data/img_37.jpg"
 
 # transforms.ToTensor()
 transform1 = transforms.Compose([
@@ -35,9 +36,10 @@ img_1 = np.transpose(img_1, (1,2,0))
 cv2.imshow('img_1', img_1)
 cv2.waitKey()
 
-##PIL 1
+##PIL
 img = Image.open(img_path).convert('RGB')
 img2 = transform1(img)
+utils.save_image(img2, 'test.jpg')
 print("img2 = ",img2)
 img_2 = transforms.ToPILImage()(img2).convert('RGB')
 print("img_2 = ",img_2)
@@ -78,7 +80,7 @@ img3.show()
 transform4 = transforms.Compose([
     transforms.ToTensor(), # range [0, 255] -> [0.0,1.0]
     transforms.ToPILImage(),
-    transforms.RandomCrop((300,300)),
+    transforms.RandomCrop((100,100)),
     ]
 )
 
