@@ -4,6 +4,7 @@
 1. - [x] torch.nn
 1. - [x] torch.nn.functional
 1. - [x] torch.nn.init
+1. - [x] torch.optim
 
 
 ## torchvision
