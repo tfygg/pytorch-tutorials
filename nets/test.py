@@ -12,13 +12,16 @@ import utils
 net = lenet.LeNet()
 print(net)
 
-for param in net.parameters():
-     print(type(param.data), param.size())
-     print(list(param.data))
+for index, param in enumerate(net.parameters()):
+    print(list(param.data))
+    print(type(param.data), param.size())
+    print index, "-->", param
 
+
+print(net.state_dict())
 print(net.state_dict().keys())
 
-for key in net.state_dict():
+for key  in net.state_dict():
     print key, 'corresponds to', list(net.state_dict()[key])
 
 
