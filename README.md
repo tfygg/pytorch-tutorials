@@ -1,7 +1,7 @@
 # pytorch-tutorials
 
 ## Pre-Processing
-   - imaqeLoader/transforms.py
+   - imageLoader/transforms.py
    
 ## Load the images 
    - imageLoader/cifar10.py
