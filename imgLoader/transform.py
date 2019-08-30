@@ -52,7 +52,7 @@ transform2 = transforms.Compose([
     ]
 )
 transform3 = transforms.Compose([
-    transforms.Normalize(mean = (1, 1, 1), std = (2, 2, 2))#range [-1.0,1.0] -> [0.0,1.0]
+    transforms.Normalize(mean = (-1, -1, -1), std = (2, 2, 2))#range [-1.0,1.0] -> [0.0,1.0]
     ]
 )
 
